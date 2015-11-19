@@ -3,8 +3,6 @@ import sys
 
 #Find location of the happiest tweet
 #-----------------------------------
-def hw():
-    print 'Hello, world!'
 
 def lines(fp):
     print str(len(fp.readlines()))
@@ -25,8 +23,6 @@ def main():
       term, score  = line.split("\t")  # The file is tab-delimited. "\t" means "tab character"
       scores[term] = int(score)  # Convert the score to an integer.
     
-    #print len(twdata) # this is 40780
-    
     #for i in range(len(twdata)):
     for i in range(70):
         
@@ -40,27 +36,18 @@ def main():
             for w in words:
                 if w in scores:
                     tweet_score+=scores[w]
-                    #print w, scores[w]
                     
-            #print i , twdata[i]["place"]# tweet, tweet_score
             if twdata[i]["place"]:
                  print i 
-            #print tweet_score        
         else:  
             tweet_score = 0     
             tweet="no text"
-            #print i, tweet, tweet_score
             print tweet_score, "no text"
    
-    #print type(twdata[11])
-    #print twdata[11].keys() # print keys of the dictionary twdata[11]
-    #print type(twdata[11]["user"])
     print twdata[49]["place"].keys() #this is a dictionary as well! The keys should be
     print twdata[49]["place"]["country"] 
-    #print type(twdata[49]["place"]["place_type"])
     print twdata[49]["place"]["full_name"]
     print type(twdata[49]["place"]["full_name"])
-    ## country_code = US, country = United States, full_name : Dorall, FL
     print twdata[29]["place"]["country"] 
     print twdata[29]["place"]["full_name"]
     unicode_string = twdata[29]["place"]["full_name"]
