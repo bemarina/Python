@@ -2,7 +2,7 @@ import json
 import sys
 
 #Find location of the happiest tweet
-#-----------------------------------
+#--------------------------------------
 
 def lines(fp):
     print str(len(fp.readlines()))
